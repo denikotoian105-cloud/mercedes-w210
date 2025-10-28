@@ -1,0 +1,277 @@
+body{
+    font-family: Arial, sans-serif;
+  line-height: 2.0;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 15px;
+   background: url("von.jpg") no-repeat center center fixed;
+  background-size: cover;  /* картинка растягивается на весь экран */
+  color: #000000;
+  
+
+
+.logo{
+  display: block;
+  margin: 0 auto 12px;
+  max-width: 280px; /* маленький */
+}
+  
+
+
+.gif {
+  
+ width: 100%;
+  height: 70vh;   /* на весь экран по высоте */
+  object-fit: cover; /* обрезает лишнее, но красиво заполняет */
+  display: block;
+  
+  
+}
+
+
+}
+.with-icon {
+  position: relative;         /* для позиционирования псевдоэлемента */
+  padding-left: 40px;         /* чтобы текст не налезал на иконку */
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+
+
+
+.icon-speed::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 37px;
+    height: 37px;
+    background-image: url('free-icon-star-7408613.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* временно для проверки */
+    /* background-color: red; */
+}
+
+
+
+
+
+
+
+.icon-power::before {
+  content: "";
+   position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 37px;
+  height: 37px;
+  background-image: url('free-icon-motor-7247986.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+
+.icon-избранные::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 37px;
+  height: 37px;
+  background-image: url('free-icon-location-11768987.png'); /* иконка скорости */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-бронировние::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 37px;
+  height: 37px;
+  background-image: url('free-icon-car-key-4634314.png'); /* иконка скорости */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon-address::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-105%);
+  width: 37px;
+  height: 37px;
+  background-image: url('free-icon-map-854878.png');
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* Общий блок текста */
+.specs-text {
+  max-width: 600px;        /* ограничиваем ширину */
+  margin: 0 auto;          /* центрируем блок по горизонтали */
+  text-align: center;      /* центрируем весь текст внутри блока */
+}
+
+/* Списки внутри этого блока */
+.specs-text ul {
+  list-style: none;        /* убираем стандартные точки */
+  padding-left: 0;         /* убираем отступ слева */
+  margin: 10px auto;       /* небольшой отступ сверху/снизу и центрируем */
+  display: inline-block;   /* чтобы список центрировался */
+  text-align: left;        /* текст списка слева от точек */
+}
+
+.specs-text ul li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.specs-text ul li::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+.specs-video-center {
+  max-width: 800px;         /* максимальная ширина видео */
+  margin: 40px auto 0 auto; /* сверху отступ 40px, по бокам авто (центрирование) */
+  aspect-ratio: 16 / 9;     /* соотношение сторон */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
+.specs-video-center iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* Галерея */
+.gallery {
+  margin-top: 40px;           
+  text-align: center;         
+}
+
+.gallery h2 {
+  font-size: 2em;             
+  margin-bottom: 20px;        
+}
+
+/* Контейнер для картинок */
+.gallery-grid {
+  display: flex;              /* в ряд */
+  justify-content: center;    
+  gap: 20px;                  /* расстояние между картинками */
+  margin-top: 20px;           
+}
+
+/* Каждый блок-картинка */
+.gallery-grid a {
+  flex: 0 0 280px;            /* фикс ширина картинок */
+}
+
+/* Стили картинок */
+.gallery-grid img {
+  width: 100%;                
+  border-radius: 16px;        
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  cursor: pointer;            
+  transition: transform 0.35s, box-shadow 0.35s;
+}
+
+/* Ступеньки ↓ */
+.gallery-grid a:nth-child(1) { margin-top: 100px; }
+.gallery-grid a:nth-child(2) { margin-top: 30px; }
+.gallery-grid a:nth-child(3) { margin-top: 120px; }
+
+/* Эффект при наведении */
+.gallery-grid img:hover {
+  transform: scale(1.08);     
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4); 
+}
+
+/* Адаптация для телефона */
+@media (max-width: 768px) {
+  .gallery-grid {
+    flex-direction: column;   /* на телефоне в колонку */
+    align-items: center;      
+  }
+  .gallery-grid a {
+    margin-top: 0 !important; /* убираем ступеньки */
+    width: 90%;               /* ширина почти на весь экран */
+  }
+}
+/* Футер (панель внизу) */
+footer {
+  background-color: #000; /* черный фон */
+  color: #aaa; /* серый текст */
+  text-align: center; /* выравнивание по центру */
+  padding: 30px 20px; /* отступы внутри */
+  margin-top: 50px; /* отступ сверху от контента */
+}
+
+/* Контейнер футера (ограничение по ширине) */
+footer .footer-container {
+  max-width: 900px; 
+  margin: auto; /* центрирование */
+}
+
+/* Блок с социальными ссылками */
+footer .social-links {
+  margin-bottom: 15px; /* отступ снизу */
+}
+
+/* Ссылки на соцсети */
+footer .social-links a {
+  display: inline-block; /* ссылки в ряд */
+  margin: 0 15px; /* отступы между ссылками */
+  font-size: 18px; /* размер текста */
+  color: #aaa; /* серый цвет */
+  transition: color 0.3s, transform 0.3s; /* плавная анимация */
+  text-decoration: none; /* убрать подчеркивание */
+}
+
+/* Иконки перед текстом */
+footer .social-links a i {
+  margin-right: 8px; /* отступ справа от иконки */
+  font-size: 22px; /* размер иконки */
+}
+
+/* Эффект при наведении на ссылки */
+footer .social-links a:hover {
+  color: #fff; /* белый цвет при наведении */
+  transform: scale(1.1); /* легкое увеличение */
+}
+
+/* Текст копирайта */
+footer p {
+  font-size: 14px;
+  margin: 0;
+}
